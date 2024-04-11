@@ -28,13 +28,13 @@ origins = [
     "127.0.0.1"
 ]
 ```
-Adding in origins the addresses from which you want to allow requests, or by leaving
+Adding in origins the addresses from which you want to allow requests, or in case you want to allow any address
 ```
 origins = [
     "*"
 ]
 ```
-In case you want to allow any address.
+.
 7. Execute the following command to run the API:
 ```
 uvicorn main:app --reload
@@ -75,11 +75,12 @@ origins = [
     "127.0.0.1"
 ]
 ```
-Agregando en origins las direcciones desde las cuales desea permitir las peticiones, o dejando
+Agregando en origins las direcciones desde las cuales desea permitir las peticiones, o en caso de desear permitir cualquier dirección
 ```
 origins = ["*"]
 ```
 En caso de desear permitir cualquier dirección.
+
 7. Ejecute el siguiente comando para correr la API:
 ```
 uvicorn main:app --reload
