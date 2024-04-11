@@ -3,7 +3,8 @@ In the kitchen, we often face the challenge of deciding what to cook with the in
 
 FoodLens is a cooking app that uses Amazon Rekognition to automatically identify foods in an image taken by the user. With this feature, users can take a picture of available ingredients and quickly receive recipes and cooking suggestions based on those ingredients. In addition, the application integrates the power of OpenAI to offer personalized and creative recommendations.
 
-To run the API locally you will need to follow the steps below:
+## To run the API locally you will need to follow the steps below:
+
 1. Clone the repository to the desired location.
 2. Open a terminal of your choice in the folder of the cloned repository. (For the instructions it will be 
 assumed that you used Git Bash).
@@ -34,7 +35,6 @@ origins = [
     "*"
 ]
 ```
-.
 7. Execute the following command to run the API:
 ```
 uvicorn main:app --reload
@@ -50,7 +50,7 @@ En la cocina, a menudo nos enfrentamos al desafío de decidir qué cocinar con l
 
 FoodLens es una aplicación de cocina que utiliza Amazon Rekognition para identificar automáticamente los alimentos en una imagen tomada por el usuario. Con esta función, los usuarios pueden tomar una foto de los ingredientes disponibles y recibir rápidamente recetas y sugerencias de cocina basadas en esos ingredientes. Además, la aplicación integra el poder de OpenAI para ofrecer recomendaciones personalizadas y creativas.
 
-Para ejecutar la API de manera local deberá seguir los siguientes pasos:
+## Para ejecutar la API de manera local deberá seguir los siguientes pasos:
 1. Clone el repositorio en la ubicación deseada.
 2. Abra una terminal de su preferencia en la carpeta del repositorio clonado. (Para las instrucciones se supondrá
 que usó Git Bash)
