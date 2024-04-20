@@ -1,6 +1,5 @@
-import datetime
-from typing import Union, List
-from pydantic import BaseModel, Field
+from typing import List, Optional
+from pydantic import BaseModel, Field, constr
 
 
 class Context(BaseModel):
@@ -9,3 +8,7 @@ class Context(BaseModel):
 
 class Response(BaseModel):
     message: str
+
+
+class IngredientResponse(BaseModel):
+    ingredients: Optional[str]
