@@ -9,8 +9,8 @@ load_dotenv()
 
 # Obtiene las claves de la API de OpenAI y las credenciales de AWS desde las variables de entorno
 api_key = os.getenv('openai_key')
-access_key = os.getenv('access_key')
-secret_access_key = os.getenv('secret_access_key')
+access_key = os.getenv('access_key_aws_rekognition')
+secret_access_key = os.getenv('secret_access_key__aws_rekognition')
 
 # Configura la API de OpenAI con la clave proporcionada
 openai.api_key = api_key

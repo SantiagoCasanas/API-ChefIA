@@ -28,13 +28,16 @@ origins = [
     "http://localhost:8080",
     "127.0.0.1"
 ]
+access_key_aws_rekognition = public key to access amazon rekognition from openai
+secret_access_key__aws_rekognition = secret key to access amazon rekognition from openai
 ```
-Adding in origins the addresses from which you want to allow requests, or in case you want to allow any address
+Adding in origins the addresses from which you wish to allow requests, or in case you wish to allow any addresses
 ```
-origins = [
-    "*"
-]
+origins = ["*"]
 ```
+In case you want to allow any address.
+
+If you have doubts about how to obtain the access keys for Amazon Rekognition Images, watch the following video https://www.youtube.com/watch?v=Z-4JHOFPn0g&t=1712s&ab_channel=RishabKattimani between minute 4:43 and 7:43 to obtain these keys
 7. Execute the following command to run the API:
 ```
 uvicorn main:app --reload
@@ -74,12 +77,16 @@ origins = [
     "http://localhost:8080",
     "127.0.0.1"
 ]
+access_key_aws_rekognition = key publica de acceso a amazon rekognition de openai
+secret_access_key__aws_rekognition = key secreta de acceso a amazon rekognition de openai
 ```
 Agregando en origins las direcciones desde las cuales desea permitir las peticiones, o en caso de desear permitir cualquier dirección
 ```
 origins = ["*"]
 ```
 En caso de desear permitir cualquier dirección.
+
+Si se tienen dudas sobre cómo obtener las claves de acceso para Amazon Rekognition Images, visualice el siguiente video https://www.youtube.com/watch?v=Z-4JHOFPn0g&t=1712s&ab_channel=RishabKattimani entre el minuto 4:43 y 7:43 para obtener dichas claves
 
 7. Ejecute el siguiente comando para correr la API:
 ```
