@@ -1,5 +1,5 @@
 from typing import List, Optional
-from pydantic import BaseModel, Field, constr
+from pydantic import BaseModel, Field
 
 
 class Context(BaseModel):

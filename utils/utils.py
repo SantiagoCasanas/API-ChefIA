@@ -71,9 +71,7 @@ def get_list_ingredients(source_bytes: bytes):
     """
     detect_objects = client.detect_labels(Image={'Bytes': source_bytes})
     list_ingredients = [label['Name'] for label in detect_objects['Labels']]
-    print(list_ingredients)
     ingredients = filter_ingredients(list_ingredients)
-    print(ingredients)
     return ingredients
 
 def get_recipe_openai(context: Context, model="gpt-3.5-turbo-16k") -> str:
