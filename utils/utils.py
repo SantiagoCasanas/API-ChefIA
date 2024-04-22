@@ -38,12 +38,17 @@ def filter_ingredients(context: Context, model="gpt-3.5-turbo-16k") -> str:
         str: Una cadena que contiene los ingredientes de cocina en español separados por comas.
     """
     prompt = f'''usando esta lista de objetos en inglés: {context}
-filtra los que sean realmente ingredientes de cocina, vegetales, frutas, sazonadores, salsas, tambien
-carnes de todo tipo o nombres de animales que se puedan comer, y todas las demas que puedas interpretar 
-como un posible ingrediente para realizar una receta a partir de estos acorde a la lista y devuelvemelos en espanol separados por comas, asi: 
-ingrediente1, ingrediente2
-Sin ningun otro texto, solo los ingredientes'''
-
+Dada esa lista, elimina todos los objetos que no sean alimentos de algun tipo, que no sean salsas, frutas, vegetales,
+carnes, etc, sin agregar mas elementos. Una vez hecho esto, devuelvemelos en texto plano en idioma espanol. por ejemplo:
+Si en la lista dice de contexto dice
+['Food', 'Medication', 'Pill', 'Bowl', 'Produce', 'Powder', 'Dining Table', 'Furniture', 'Table', 'Breakfast', 'Butter', 'Grain', 'Seed', 'Nut', 'Plant', 'Vegetable', 'Cooking', 'Cooking Batter']
+Tu respuesta seria:
+'Mantequilla, Verdura, Fruto seco'
+Ya que son los ingredientes posibles de esa lista.
+Sin nigun texto extra, solo un texto plano de los ingredientes que sean comida
+Recuerda que eso solo fue un ejemplo, el filtro deberas hacerlo tu y devolver en espanol lo correcto
+'''
+    print(context)
     messages = [{"role": "user", "content": prompt}]
     response = openai.chat.completions.create(
         model=model,
