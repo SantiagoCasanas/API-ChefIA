@@ -43,12 +43,11 @@ carnes, etc, sin agregar mas elementos. Una vez hecho esto, devuelvemelos en tex
 Si en la lista dice de contexto dice
 ['Food', 'Medication', 'Pill', 'Bowl', 'Produce', 'Powder', 'Dining Table', 'Furniture', 'Table', 'Breakfast', 'Butter', 'Grain', 'Seed', 'Nut', 'Plant', 'Vegetable', 'Cooking', 'Cooking Batter']
 Tu respuesta seria:
-'Mantequilla, Verdura, Fruto seco'
+Mantequilla, Verdura, Fruto seco
 Ya que son los ingredientes posibles de esa lista.
 Sin nigun texto extra, solo un texto plano de los ingredientes que sean comida
 Recuerda que eso solo fue un ejemplo, el filtro deberas hacerlo tu y devolver en espanol lo correcto
 '''
-    print(context)
     messages = [{"role": "user", "content": prompt}]
     response = openai.chat.completions.create(
         model=model,
